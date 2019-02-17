@@ -1,0 +1,46 @@
+#include <iostream>;
+
+using namespace std;
+
+
+void main()
+{
+	setlocale(LC_ALL,"Rus");
+
+	int b = 0;
+
+	while(b < 1)
+	{
+		cout<<"           "<<" ooo "<<endl;
+		cout<<"           "<<"o   o"<<endl;
+		cout<<"           "<<" ooo "<<endl;
+		for(int i=0;i<7;i++)
+		cout<<"           "<<"o"<<endl;
+		system("cls");
+		cout<<"              "<<"o      ooo"<<endl;
+		cout<<"             "<<"o      o   o"<<endl;
+		cout<<"            "<<"o        ooo"<<endl;
+		cout<<"           "<<"o"<<endl;
+		cout<<"          "<<"o"<<endl;
+		cout<<"         "<<"o"<<endl;
+		cout<<"        "<<"o"<<endl;
+		system("cls");
+		cout<<"                         "<<" ooo "<<endl;
+		cout<<"                         "<<"o   o"<<endl;
+		cout<<"                         "<<" ooo "<<endl;
+		cout<<"       "<<"o o o o o";
+		system("cls");
+		cout<<"        "<<"o"<<endl;
+		cout<<"         "<<"o"<<endl;
+		cout<<"          "<<"o"<<endl;
+		cout<<"           "<<"o"<<endl;
+		cout<<"            "<<"o"<<endl;
+		cout<<"             "<<"o"<<endl;
+		cout<<"              "<<"o"<<endl;
+		system("cls");
+
+	}
+
+
+	system("pause");
+}

@@ -1,0 +1,38 @@
+#include <iostream>
+#include <ctime>
+using namespace std;
+
+void main()
+{
+	setlocale(LC_ALL, "Rus");
+	srand(time(NULL));
+	int Power = 50;
+	int M[5];
+	int power = 50;
+	int heats = 0;
+
+	for (int i = 0; i < 5; i++) 
+	{
+		cin >> M[i];
+		cout << "Масса груза номер " << i + 1 << " = " << M[i] << endl;
+	}
+
+	for (int i = 0; i < 5; i++)
+	{
+		power = power - M[i];
+		if (power < 0)
+		{
+			heats = heats + 1;
+			power = Power;
+			i = i - 1;
+		}
+		if (power == 0)
+		{
+			heats = heats + 1;
+			power = Power;
+		}
+	}
+	cout << "Колличество заплывов равно " << heats + 1 << endl;
+
+	system("pause");
+}

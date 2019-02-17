@@ -1,0 +1,33 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+	setlocale(LC_ALL, "Rus");
+
+	int a;
+	int b;
+	int c;
+
+	cout<<"Приветсвуем, это программа найдет наибольшее из введенных чисел. Сколько чисел   хотите ввести?"<<endl;
+	cin>>a;
+	cout<<"Хорошо"<<endl;
+	c = 0;
+	while(a > 0)
+	{
+		cout<<"Введите число!"<<endl;
+		cin>>b;
+		if(c < b)
+		{
+			c = b;
+		}
+
+		a--;
+	}
+	cout<<"Наибольшее число "<<c<<endl;
+
+
+
+	system("pause");
+}

@@ -1,0 +1,38 @@
+#include <iostream>;
+
+using namespace std;
+
+void main()
+{
+	setlocale(LC_ALL,"Rus");
+
+	float a;
+	float b;
+	int d;
+
+	while(1)
+	{
+		cout<<"Добро пожаловать в калькулятор"<<endl;
+		cout<<"Введите 1 чтобы сложить, 2 чтобы вычесть, 3 чтобы умножить, 4 чтобы разделить"<<endl;
+		cin>>d;
+		system("cls");
+		cout<<"Введите первое число"<<endl;
+		cin>>a;
+		cout<<"Введите второе число"<<endl;
+		cin>>b;
+		switch (d)
+		{
+		case 1:cout<<"Ваш ответ "<<a + b<<endl;
+			break;
+		case 2:cout<<"Ваш ответ "<<a - b<<endl;
+			break;
+		case 3:cout<<"Ваш ответ "<<a * b<<endl;
+			break;
+		case 4:cout<<"Ваш ответ "<<a / b<<endl;
+			break;
+		}
+		system("pause");
+		system("cls");
+	}
+	system("pause");
+}

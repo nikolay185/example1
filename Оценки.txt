@@ -1,0 +1,130 @@
+#include <iostream>
+#include <ctime>
+#include <vector>
+using namespace std;
+
+void main()
+{
+	setlocale(LC_ALL, "Rus");
+	srand(time(NULL));
+
+	vector<float> good = { 0 };
+	vector<float> bad = { 0 };
+	int i;
+	int a = 0;
+	int b = 0;
+	float sum = 0;
+	float Sum = 0;
+	float SA = 0;
+	float sa = 0;
+	int c = 0;
+	int answer;
+	int voit = -1;
+	while (voit != 0)
+	{
+		cout << "1. Ввести оценку" << endl;
+		cout << "2. Среднее арифметическое" << endl;
+		cout << "3. Итоговая " << endl;
+		cout << "0. Выход " << endl;
+		cin >> voit;
+		switch (voit)
+		{
+		case 1:
+		{
+			cout << "Оценка: ";
+			cin >> i;
+			while (i < 2 || i > 5)
+			{
+				cout << "Ошибка, повторный ввод" << endl;
+				cin >> i;
+			}
+			if (i == 5 || i == 4)
+			{
+				sum = sum + i;
+				a++;
+				good.push_back(i);
+			}
+			if (i == 3 || i == 2)
+			{
+				Sum = Sum + i;
+				b++;
+				bad.push_back(i);
+			}
+			break;
+		}
+		case 2:
+		{
+			cout << "Чей результат?" << endl;
+			cout << "1. Хорошая " << endl;
+			cout << "2. Плохая" << endl;
+			cin >> answer;
+			switch (answer)
+			{
+			case 1:
+			{
+				SA = sum / a;
+				cout << "Среднее арифметическое равно " << SA << endl;
+				break;
+			}
+			case 2:
+			{
+				sa = Sum / b;
+				cout << "Среднее арифметическое равно " << sa << endl;
+				break;
+			}
+			}
+			break;
+		}
+		case 3:
+		{
+			cout << "Чей результат?" << endl;
+			cout << "1. Хорошая " << endl;
+			cout << "2. Плохая" << endl;
+			cin >> answer;
+			switch (answer)
+			{
+			case 1:
+			{
+				if (SA >= 4.6)
+				{
+					c = 5;
+				}
+				else c = 4;
+				cout << "Итоговая оценка равна " << c << endl;
+				break;
+			}
+			case 2:
+			{
+				if (sa >= 2.6)
+				{
+					c = 3;
+				}
+				else c = 2;
+				cout << "Итоговая оценка равна " << c << endl;
+				break;
+			}
+			}
+			break;
+		}
+		case 0:
+		{
+			break;
+		}
+
+		}
+
+
+
+
+
+
+
+	}
+
+
+
+
+
+
+	system("pause");
+}

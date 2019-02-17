@@ -1,0 +1,89 @@
+#include <iostream>
+#include <ctime>
+using namespace std;
+
+void randmas(float* mas, int size)
+{
+	for (int i = 0; i < size; i++)
+	{
+		mas[i] = (rand() % 100 - 50) / 10;
+	}
+
+}
+void print(float* mas, int size)
+{
+	for (int i = 0; i < size; i++)
+	{
+		cout << mas[i] << " ";
+	}
+}
+void sort(float* mas, int size)
+{
+	for (int i = 0; i < size; i++)
+	{
+		for (int j = 0; j < size - 1; j++)
+		{
+			if (mas[j] > mas[j + 1])
+			{
+				swap(mas[j], mas[j + 1]);
+			}
+		}
+	}
+
+}
+void main()
+{
+	setlocale(LC_ALL, "Rus");
+	srand(time(NULL));
+	int voit;
+	int n;
+	cout << "Введите длину массива: " << endl;
+	cin >> n;
+	float* mas = new float[n];
+
+
+	while (true)
+	{
+		cout << "Выберите действие" << endl;
+		cout << "1. Заполнить массив" << endl;
+		cout << "2. Вывести массив" << endl;
+		cout << "3. Отсортировать" << endl;
+		cout << "0. Выход" << endl;
+		cin >> voit;
+
+		switch (voit)
+		{
+		case 0:
+		{
+			exit(0);
+		}
+		case 1:
+		{
+			randmas(mas, n);
+			cout << "Действие выполнено" << endl;
+			break;
+		}
+		case 2:
+		{
+			print(mas, n);
+			cout << "Действие выполнено" << endl;
+			break;
+		}
+		case 3:
+		{
+			sort(mas, n);
+			cout << "Действие выполнено" << endl;
+			break;
+		}
+		default:
+		{
+			cout << "Ошибка" << endl;
+		}
+		}
+	}
+
+	delete[]mas;
+
+
+	system("pause");
+}
